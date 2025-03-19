@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Book-To-TV with questions or suggestions">
+    <meta name="keywords" content="contact, book adaptations, suggestions">
+    <title>Contact - Book-To-TV</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/gif">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Book-To-TV Logo" width="80" height="80">
+        <h1>Book-To-TV</h1>
+        <a href="contact.html"><button id="active">Reach us</button></a>
+    </header>
+    
+    <nav>
+        <div class="nav-buttons">
+            <a href="index.html">
+                <button>Home</button>
+            </a>
+            <a href="divergent.html">
+                <button>Divergent</button>
+            </a>
+            <a href="maze-runner.html">
+                <button>Maze Runner</button>
+            </a>
+            <a href="hunger-games.html">
+                <button>Hunger Games</button>
+            </a>
+        </div>
+    </nav>
+    
+    <section>
+        <aside>
+            <p>Get in Touch</p>
+            <h2>Contact Us</h2>
+            <p>Reach out with questions, suggestions for future adaptations to analyze, or feedback on our content.</p>
+            
+            <address>
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:info@book-to-tv.com">info@book-to-tv.com</a></p>
+                <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+                <p>Address: 77 Bandeville Street, Miltown Malbay, Co. Clare, T03YD34</p>
+            </address>
+        </aside>
+        
+        <main>
+            <h3>Send Us a Message</h3>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                    
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Your email address">
+                    
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject of your message">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Your Message</legend>
+                    
+                    <label for="adaptation">Adaptation of interest</label>
+                    <select id="adaptation" name="adaptation">
+                        <option value="">-- Select an adaptation --</option>
+                        <option value="divergent">Divergent</option>
+                        <option value="maze-runner">Maze Runner</option>
+                        <option value="hunger-games">Hunger Games</option>
+                        <option value="other">Other (please specify)</option>
+                    </select>
+                    
+                    <label for="other-adaptation">If other, please specify:</label>
+                    <input type="text" id="other-adaptation" name="other-adaptation" placeholder="Enter other adaptation">
+                    
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <p>Preferred contact method:</p>
+                    <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+                    <label for="contact-email">Email</label>
+                    
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+                    
+                    <br>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    <label for="newsletter">Subscribe to our newsletter</label>
+                </fieldset>
+                
+                <button type="submit">Send Message</button>
+                <button type="reset">Clear Form</button>
+            </form>
+            
+            <section>
+                <h3>Frequently Asked Questions</h3>
+                <details>
+                    <summary>How do you select which adaptations to analyze?</summary>
+                    <p>We focus on popular literary works that have significant differences between the book and screen versions, creating interesting points for discussion and analysis.</p>
+                </details>
+                
+                <details>
+                    <summary>Can I suggest a book-to-screen adaptation for analysis?</summary>
+                    <p>Absolutely! We welcome suggestions through our contact form. We prioritize adaptations with substantial reader/viewer interest.</p>
+                </details>
+                
+                <details>
+                    <summary>Do you analyze TV series adaptations as well as movies?</summary>
+                    <p>Yes, we analyze both film and television adaptations of books, as each presents unique adaptation challenges and opportunities.</p>
+                </details>
+            </section>
+        </main>
+    </section>
+    
+    <footer>
+        <p>Copyright&copy; 2025 Book-To-TV. All rights reserved.</p>
+    </footer>
+</body>
+</html>
