@@ -1,0 +1,264 @@
+/* Base Styles */
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9e7e7;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #d2ccc3;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+header img {
+    margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: #333 2px 2px 5px;
+}
+
+header h1 {
+    color: #df6f6f;
+}
+
+header button {
+    background-color: #e34444;
+    padding: 10px 15px;
+    border: 2px solid #df6f6f;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: rgb(94, 100, 104);
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* overlaps aside section */
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#active {
+    background-color: #c96060;
+}
+
+/* Button styles */
+
+button {
+    background-color: #e34444;
+    padding: 10px 15px;
+    border: 2px solid #df6f6f;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #c96060;
+}
+
+/* Content Layout */
+section {
+    display: flex;
+    padding-top: 150px;
+}
+
+/* Aside Styles */
+aside {
+    width: 45%;
+    background: #fff;
+    padding: 40px;
+    position: fixed;
+    top: 150px;
+    left: 0;
+    bottom: 50px; 
+    overflow-y: auto;
+}
+
+aside h2 {
+    font-size: 4.5rem;
+    margin-top: 20px;
+}
+
+aside p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #666;
+}
+
+aside h3 {
+    margin-top: 30px;
+    color: #df6f6f;
+}
+
+address {
+    font-style: normal;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+address a {
+    color: #e34444;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+    width: 55%;
+    margin-left: 45%;
+    padding: 40px;
+    padding-bottom: 100px;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+main p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+main h3 {
+    font-size: 1.5rem;
+    margin: 25px 0 15px 0;
+    color: #df6f6f;
+}
+
+main h4 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: bold;
+    color: #df6f6f;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+button[type="reset"] {
+    background-color: #666;
+    border: none;
+}
+
+button[type="reset"]:hover {
+    background-color: #555;
+}
+
+.required {
+    color: #e34444;
+}
+
+/* FAQ Styles */
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    padding: 8px 0;
+}
+
+summary:hover {
+    color: #df6f6f;
+}
+
+details p {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+/* Footer Styles */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #d2ccc3;
+    padding: 15px;
+    text-align: center;
+}
