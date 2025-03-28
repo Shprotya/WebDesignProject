@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/favicon.ico" type="image/gif">
     <style>
-        /* Internal styling*/
-
+        /*Internal styling*/
         main img {
             margin-right: 30px; 
             float: left;
@@ -55,8 +54,10 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Book-To-TV Logo" width="80" height="80">
-        <h1>Book-To-TV</h1>
+        <img class="logo" src="images/logo.png" alt="Book-To-TV Logo" width="80" height="80">
+        <section class="header__logo">
+            <h1>Book-To-TV</h1>
+        </section>
         <a href="contact.html"><button>Reach us</button></a>
     </header>
     
@@ -77,24 +78,23 @@
         </section>
     </nav>
     
-    <section>
-        <aside>
-            <p>Book vs. Movie Analysis</p>
-            <h2>Divergent</h2>
-            <p>Exploring how Veronica Roth's dystopian Chicago transformed from page to screen.</p>
-            
-            <h3>Navigation</h3>
-            <ol>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#differences">Differences</a></li>
-                <li><a href="#characters">Characters</a></li>
-                <li><a href="#stats">Statistics</a></li>
-                <li><a href="#references">References</a></li>
-            </ol>
-        </aside>
+    <aside>
+        <p>Book vs. Movie Analysis</p>
+        <h2>Divergent</h2>
+        <p>Exploring how Veronica Roth's dystopian Chicago transformed from page to screen.</p>
         
-        <main style="padding-top: 200px;">
-            <img src="images/film-vs-novel-divergent.jpg" alt="Divergent book and movie poster side by side">
+        <h3>Navigation</h3>
+        <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#differences">Differences</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#stats">Statistics</a></li>
+            <li><a href="#references">References</a></li>
+        </ol>
+    </aside>
+
+    <main class="top">
+        <img src="images/film-vs-novel-divergent.jpg" alt="Divergent book and movie poster side by side">
             
             <section id="overview">
                 <h3 class="margin-h3">Divergent: From Page to Screen</h3>
@@ -138,56 +138,74 @@
                     
                     <p style="border: 1px #e34444 dotted; padding: 10px;">Read more about the <a href="https://www.hollywoodreporter.com/movies/movie-news/divergent-author-film-franchise-feels-complete-scrapped-final-movie-1235624133/">casting of Kate Winslet</a> as Jeanine Matthews.</p>
                 </section>
-            </section>
             
-            <section id="stats" class="section-padd">
-                <h3 class="margin-h3">Adaptation Statistics</h3>
-                <p>The following table compares key aspects of the book and film adaptation:</p>
-                
-                <table>
-                    <tr>
-                        <th>Metric</th>
-                        <th>Book</th>
-                        <th>Film</th>
-                        <th>Difference</th>
-                    </tr>
-                    <tr>
-                        <td>Length</td>
-                        <td>487 pages</td>
-                        <td>139 minutes</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Named Characters</td>
-                        <td>42</td>
-                        <td>24</td>
-                        <td>-18</td>
-                    </tr>
-                    <tr>
-                        <td>Initiation Stages</td>
-                        <td>3 stages</td>
-                        <td>2 stages</td>
-                        <td>-1</td>
-                    </tr>
-                    <tr>
-                        <td>Tris's Fear Count</td>
-                        <td>7</td>
-                        <td>6</td>
-                        <td>-1</td>
-                    </tr>
-                    <tr>
-                        <td>Box Office Revenue</td>
-                        <td>N/A</td>
-                        <td>$288.9 million</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Critical Reception</td>
-                        <td>4.2/5 (Goodreads)</td>
-                        <td>41% (Rotten Tomatoes)</td>
-                        <td>Mixed</td>
-                    </tr>
-                </table>
+                <section id="stats" class="section-padd">
+                    <h3 class="margin-h3">Adaptation Statistics</h3>
+                    <p>The following table compares key aspects of the book and film adaptation:</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Divergent (Book)</th>
+                            <th>Divergent (Movie)</th>
+                            <th>Difference</th>
+                        </tr>
+                        <tr>
+                            <td>Main Character Age</td>
+                            <td>16 years old</td>
+                            <td>18 years old</td>
+                            <td>Aged up for a mature audience</td>
+                        </tr>
+                        <tr>
+                            <td>Word Count / Runtime</td>
+                            <td>~105,000 words</td>
+                            <td>2h 19m</td>
+                            <td>Some details cut for time</td>
+                        </tr>
+                        <tr>
+                            <td>Factions Explained</td>
+                            <td>All 5 in detail</td>
+                            <td>3 briefly explained</td>
+                            <td>Less world-building in the movie</td>
+                        </tr>
+                        <tr>
+                            <td>Percentage of Story Adapted</td>
+                            <td>90%</td>
+                            <td>60%</td>
+                            <td>Some plot points removed or changed</td>
+                        </tr>
+                        <tr>
+                            <td>Action vs. Romance Focus</td>
+                            <td>40% action, 40% romance</td>
+                            <td>55% action, 55% romance</td>
+                            <td>More emphasis on action and romance</td>
+                        </tr>
+                        <tr>
+                            <td>Character Deaths Shown</td>
+                            <td>85%</td>
+                            <td>70%</td>
+                            <td>Some deaths toned down or removed</td>
+                        </tr>
+                        <tr>
+                            <td>Villain Development</td>
+                            <td>More complex</td>
+                            <td>Simplified</td>
+                            <td>Movie reduced villain depth</td>
+                        </tr>
+                        <tr>
+                            <td>Box Office Revenue</td>
+                            <td>N/A</td>
+                            <td>$288 million</td>
+                            <td>Movie was a commercial success</td>
+                        </tr>
+                        <tr>
+                            <td>Reader/Viewer Rating</td>
+                            <td>4.3/5 (Goodreads)</td>
+                            <td>6.6/10 (IMDb)</td>
+                            <td>Movie had a mixed reception</td>
+                        </tr>
+                    </table>
+                </section>
             </section>
             
             <section id="references" class="section-padd">
