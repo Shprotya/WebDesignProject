@@ -15,13 +15,17 @@ body {
     color: #333;
 }
 
+/* Layout Fundamentals */
+.top {
+    padding-top: 200px;
+}
+
 /* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
-    height: 100px;
-    display: flex;
     align-items: center;
+    height: 100px;
     background-color: #d2ccc3;
     padding: 0 20px;
     position: fixed;
@@ -31,22 +35,54 @@ header {
     z-index: 200;
 }
 
-header img {
+header img.logo {
     margin-right: 15px;
     border-radius: 50%;
     box-shadow: #333 2px 2px 5px;
 }
 
-header h1 {
+.header__logo {
+    font-size: 1.5em;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header__logo h1 {
     color: #df6f6f;
 }
 
-header button {
-    background-color: #e34444;
-    padding: 10px 15px;
-    border: 2px solid #df6f6f;
-    border-radius: 30px;
-    cursor: pointer;
+/* Animated Logo Indicator */
+.header__logo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 12px;
+    height: 12px;
+    border-radius: 5px;
+    background: #ef3f3f;
+    transition: 500ms;
+    animation: updown 1.5s infinite;
+}
+
+.header__logo:hover::before {
+    animation: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+    background: #eb6b6b94;
+}
+
+@keyframes updown {
+    0% { top: -10px; }
+    50% { top: 30px; }
+    100% { top: -10px; }
 }
 
 /* Navigation Styles */
@@ -58,22 +94,20 @@ nav {
     top: 100px;
     left: 0;
     width: 100%;
-    z-index: 100; /* overlaps aside section */
+    z-index: 100;
 }
 
 .nav-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    padding: 0;
 }
 
 #active {
     background-color: #c96060;
 }
 
-/* Button styles */
-
+/* Button Styles */
 button {
     background-color: #e34444;
     padding: 10px 15px;
@@ -82,26 +116,16 @@ button {
     cursor: pointer;
     font-size: 1rem;
     color: white;
-}
-
-button a {
-    color: white;
-    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #c96060;
 }
 
-.top {
-    padding-top: 150px;
-}
-
-#characters h4 {
-    margin-top: 30px;
-    color: #df6f6f;
-    font-size: 1.3rem;
-    margin-right: 10px;
+button a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Aside Styles */
@@ -133,20 +157,6 @@ aside h3 {
     color: #df6f6f;
 }
 
-address {
-    font-style: normal;
-    margin-top: 15px;
-    line-height: 1.6;
-}
-
-address a {
-    text-decoration: none;
-}
-
-address a:hover {
-    text-decoration: underline;
-}
-
 aside ol {
     margin-left: 20px;
     margin-top: 15px;
@@ -166,23 +176,28 @@ aside a {
 
 aside a:hover {
     background-color: #f7e9e9;
-    text-decoration: none;
 }
-
 
 /* Main Content Styles */
 main {
     width: 65%;
     margin-left: 35%;
-    padding: 40px;
+    padding: 0 40px 40px 40px;
 }
 
-main img {
+main img:not(.logo) {
     float: left;
     margin-right: 20px;
     width: 50%;
     height: auto;
     margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+main img:not(.logo):hover {
+    transform: scale(1.05);
 }
 
 main p {
@@ -231,13 +246,6 @@ label {
     font-weight: bold;
 }
 
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-    display: inline;
-    font-weight: normal;
-    margin-left: 5px;
-}
-
 input, select, textarea {
     width: 100%;
     padding: 10px;
@@ -253,6 +261,17 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.required {
+    color: #e34444;
+}
+
 button[type="reset"] {
     background-color: #666;
     border: none;
@@ -262,12 +281,7 @@ button[type="reset"]:hover {
     background-color: #555;
 }
 
-.required {
-    color: #e34444;
-}
-
 /* FAQ Styles */
-
 summary {
     font-weight: bold;
     cursor: pointer;
@@ -288,10 +302,10 @@ details p {
 
 /* Footer Styles */
 footer {
-    position: relative;
     background-color: #d2ccc3;
     padding: 15px;
     text-align: center;
+    position: relative;
     z-index: 200;
 }
 
@@ -318,15 +332,39 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/*Other styling*/
-a {
-    color: #e34444;
+/* Specific Page Enhancements */
+#characters h4 {
+    margin-top: 30px;
+    color: #df6f6f;
+    font-size: 1.3rem;
+    margin-right: 10px;
 }
 
+/* Utility Classes */
 .margin-h3 {
     margin-right: 20px;
 }
 
 .section-padd {
     padding-top: 30px;
+}
+
+/* Hyperlink Styles */
+a {
+    color: #e34444;
+}
+
+/* Address Styles */
+address {
+    font-style: normal;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+address a {
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
 }
