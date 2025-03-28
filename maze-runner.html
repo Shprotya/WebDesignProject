@@ -8,15 +8,113 @@
     <title>Maze Runner - Book-To-TV</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/favicon.ico" type="image/gif">
+    <style>
+
+        /* Unique styling for Maze Runner page */
+        body {
+            background: url('images/maze-runner-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        main {
+            background-color: rgba(0, 0, 0, 0.571);
+            padding: 40px;
+            border-radius: 15px;
+            color: #e0e0e0;
+        }
+
+        main h3 {
+            color: #e76a6a;
+            border-bottom: 2px solid #e34444;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        main img {
+            margin-right: 30px; 
+            float: left;
+            height: auto;
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        main img:hover {
+            transform: scale(1.05);
+        }
+
+        #overview {
+            margin-bottom: 15%;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            margin: 30px 0 60px 0; 
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: visible; 
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-container p {
+            position: relative;
+            top: 580px;
+            text-align: center;
+        }
+
+        .adaptation-insights {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .adaptation-card {
+            background-color: rgba(50, 50, 50, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .adaptation-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .adaptation-card h4 {
+            color: #e34444;
+            margin-bottom: 15px;
+        }
+
+        #references ul {
+            background-color: rgba(50, 50, 50, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Book-To-TV Logo" width="80" height="80">
-        <h1>Book-To-TV</h1>
+        <img class="logo" src="images/logo.png" alt="Book-To-TV Logo" width="80" height="80">
+        <section class="header__logo">
+            <h1>Book-To-TV</h1>
+        </section>
         <a href="contact.html"><button>Reach us</button></a>
     </header>
+    
     <nav>
-        <div class="nav-buttons">
+        <section class="nav-buttons">
             <a href="index.html">
                 <button>Home</button>
             </a>
@@ -29,11 +127,96 @@
             <a href="hunger-games.html">
                 <button>Hunger Games</button>
             </a>
-        </div>
+        </section>
     </nav>
-
+    
+    <section>
+        <aside>
+            <p>Book vs. Movie Analysis</p>
+            <h2>Maze Runner</h2>
+            <p>Unraveling the journey from James Dashner's novel to the big screen.</p>
+            
+            <h3>Navigation</h3>
+            <ol>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#story-evolution">Story Evolution</a></li>
+                <li><a href="#characters">Character Journey</a></li>
+                <li><a href="#media-impact">Media Impact</a></li>
+                <li><a href="#references">References</a></li>
+            </ol>
+        </aside>
+        
+        <main style="padding-top: 200px;">
+            <img src="images/maze-comparison.jpg" alt="Maze Runner book and movie poster side by side">
+            
+            <section id="overview">
+                <h3>The Maze Runner: A Dystopian Transformation</h3>
+                <p>James Dashner's 2009 novel <em>The Maze Runner</em> captivated readers with its unique blend of science fiction, survival, and mystery. The 2014 film adaptation, directed by Wes Ball, translated this complex narrative into a visually stunning cinematic experience.</p>
+            </section>
+            
+            <section class="video-container">
+                <video controls>
+                    <source src="video/maze-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>You can access to the original video <a href="https://www.youtube.com/watch?v=-XQt72E91BM&t=177s">here</a></p>
+            </section>
+            
+            <section id="story-evolution">
+                <h3>Story Evolution: Book to Screen</h3>
+                <div class="adaptation-insights">
+                    <div class="adaptation-card">
+                        <h4>Narrative Compression</h4>
+                        <p>The film strategically condensed the book's intricate world-building, focusing on high-stakes action and visual storytelling.</p>
+                    </div>
+                    <div class="adaptation-card">
+                        <h4>Character Dynamics</h4>
+                        <p>While maintaining core character essentials, the film adaptation simplified interpersonal relationships for cinematic flow.</p>
+                    </div>
+                    <div class="adaptation-card">
+                        <h4>Visual Interpretation</h4>
+                        <p>Wes Ball's direction transformed Dashner's textual maze into a breathtaking, menacing labyrinth that became a character itself.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="characters">
+                <h3>Character Journey: Transformation and Adaptation</h3>
+                <p>The film's casting and character portrayal brought nuanced changes to Dashner's original characters:</p>
+                <ul>
+                    <li><strong>Thomas (Dylan O'Brien):</strong> Portrayed with more immediate heroism compared to the book's more gradual character development.</li>
+                    <li><strong>Teresa (Kaya Scodelario):</strong> Her character arc was significantly condensed, losing some of the book's psychological complexity.</li>
+                    <li><strong>Newt and Minho:</strong> Retained their core personalities but given less individual backstory in the film adaptation.</li>
+                </ul>
+            </section>
+            
+            <section id="media-impact">
+                <h3>Cultural and Media Impact</h3>
+                <p>The Maze Runner franchise demonstrated the ongoing appeal of young adult dystopian narratives, following the success of similar adaptations like Hunger Games and Divergent.</p>
+                <p>The film grossed approximately $348 million worldwide, spawning a successful trilogy and maintaining a dedicated fan base.</p>
+            </section>
+            
+            <section id="references">
+                <h3>References and Further Exploration</h3>
+                <ul>
+                    <li>Dashner, J. (2009). <em>The Maze Runner</em>. Delacorte Press.</li>
+                    <li>Ball, W. (Director). (2014). <em>Maze Runner</em> [Film]. 20th Century Fox.</li>
+                    <li>Comprehensive analysis of book-to-film adaptations in young adult dystopian genre</li>
+                    <li>Exploration of narrative transformation in visual media</li>
+                </ul>
+            </section>
+        </main>
+    </section>
+    
     <footer>
-        <p>Copyright&copy; 2025 Book-To-TV. All rights reserved.</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="divergent.html">Divergent</a></li>
+            <li><a href="maze-runner.html">Maze Runner</a></li>
+            <li><a href="hunger-games.html">Hunger Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p>&copy; 2025 Book-To-TV. All rights reserved.</p>
     </footer>
 </body>
 </html>
