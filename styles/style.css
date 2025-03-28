@@ -461,11 +461,11 @@ address a:hover {
     }
 
     h1 {
-        font-size: 1em;
+        font-size: 0.6em;
     }
 
     .header__logo {
-        width: 130px;
+        width: 150px;
     }
 
     aside {
@@ -474,7 +474,7 @@ address a:hover {
 
     main {
         width: 100%;
-        margin-left: 3%;
+        margin-left: 0.5%;
     }
 
     .nav-buttons {
